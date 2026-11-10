@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-grid {
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.profile-section {
+    grid-column: 1 / -1;
+}
+
+.profile-section p {
+    margin-bottom: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #3366cc;
+    border-color: #3366cc;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3366cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #254d99;
+}
+
+button:focus {
+    outline: 2px solid #222;
+    outline-offset: 2px;
+}
+
+.error-text {
+    color: #cc0000;
+    margin-top: 10px;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-left: 5px solid #999;
+    border-radius: 5px;
+}
+
+.priority-low {
+    border-left-color: green;
+}
+
+.priority-medium {
+    border-left-color: orange;
+}
+
+.priority-high {
+    border-left-color: red;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    background-color: #eeeeee;
+    font-size: 12px;
+}
+
+body.dark-theme {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+.dark-theme .app-header,
+.dark-theme .card {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-theme .task-item {
+    border-color: #666;
+}
+
+.dark-theme input,
+.dark-theme select {
+    background-color: #444;
+    color: white;
+    border-color: #777;
+}
+
+.dark-theme .badge {
+    background-color: #555;
+    color: white;
+}
+
+@media (max-width: 650px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
